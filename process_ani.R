@@ -1,4 +1,24 @@
 #!/usr/bin/env Rscript
+#' Process skani clustering matrix to extract network and detailled tables
+#'
+#' Description: This script processes a skani clustering matrix to extract network graphs and detailed tables. 
+#' It reads the ANI (Average Nucleotide Identity) matrix, processes it to create a network of high similarity clusters, 
+#' and generates visualizations and tables summarizing the clustering results. The script identifies species groups 
+#' based on a given threshold, visualizes the network of relationships, and extracts detailed information about the groups.
+#'
+#' Author: Camilo H. Parada Rojas
+#' Contact: paradar@oregonstate.edu
+#' Institution: Oregon State University - BPP
+#' Date: 2024-07-19
+#'
+#' License: This script is licensed under the MIT License.
+#' 
+#' Citation:
+#' Camilo H. Parada Rojas (2024). ANI network analysis. Version 1.0. https://github.com/cahuparo/networks/edit/main/process_ani.R
+#'
+#' Acknowledgments:
+#' This work was supported by [Brady grant]. Special thanks to [Riley B., Jeff C.].
+#'
 
 # Load necessary libraries
 libraries <- c("tidyr", "dplyr", "igraph", "ComplexHeatmap", "circlize", 
